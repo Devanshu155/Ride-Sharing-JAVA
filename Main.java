@@ -45,28 +45,19 @@ class CarRide extends Ride {
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         try {
-            // Read ride type and distance from the user
             String rideType = scanner.nextLine().trim().toLowerCase();
             double distance = Double.parseDouble(scanner.nextLine());
-
-            // Validate the distance
             if (distance <= 0) {
                 System.out.println("Error: Distance must be a positive number.");
                 return;
             }
-
-            Ride ride; // Reference to the abstract Ride class
-
-            // Use a switch statement to create the appropriate ride object
+            Ride ride; /
             switch (rideType) {
                 case "bike":
-                    // Create a BikeRide object with sample driver details
                     ride = new BikeRide("Ravi Kumar", "MH12 AB-1234", distance);
                     break;
                 case "car":
-                    // Create a CarRide object with sample driver details
                     ride = new CarRide("Priya Sharma", "MH14 CD-5678", distance);
                     break;
                 default:
