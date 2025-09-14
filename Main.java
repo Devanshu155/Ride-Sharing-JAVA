@@ -52,7 +52,7 @@ public class Main {
                 System.out.println("Error: Distance must be a positive number.");
                 return;
             }
-            Ride ride; /
+            Ride ride; 
             switch (rideType) {
                 case "bike":
                     ride = new BikeRide("Ravi Kumar", "MH12 AB-1234", distance);
